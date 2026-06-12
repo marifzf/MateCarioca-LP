@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Mate Carioca</title>
+    <link rel="icon" type="image/svg+xml" href="assets/MATE ID-10.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cardapio.css">
+</head>
+<body>
+
+    <header class="cabecalho-topo">
+        <div class="caixa-logo">
+            <img src="assets/MATE ID-12 1.png" alt="Logotipo Mate Carioca" class="logo-mate">
+        </div>
+        <nav class="menu-navegacao">
+            <ul>
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="/cardapio.html" class="link-ativo">Cardápio</a></li>
+                <li><a href="/parcerias.html">Parcerias</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="cardapio" class="secao-cardapio">
+        <div class="container-centralizado animar-scroll">
+            <h2 class="titulo-cardapio">Nosso cardápio</h2>
+            <p class="subtitulo-cardapio">Escolha seu sabor favorito e experimente o melhor mate gelado do Rio</p>
+        </div>
+
+        <div class="carrossel-cardapio animar-scroll">
+            <button class="seta-carrossel seta-esquerda" aria-label="Item anterior">&#10094;</button>
+
+            <div class="carrossel-janela">
+                <div class="carrossel-trilho">
+
+                <article class="card-produto">
+                    <div class="card-topo">
+                        <img src="assets/mate limao.png" alt="Garrafa de Mate Carioca Limão">
+                    </div>
+                    <div class="card-info">
+                        <h3>Mate Carioca Limão</h3>
+                        <p>O tradicional, gelado e batido com limão fresco na hora.</p>
+                        <span class="preco-produto">R$10,00</span>
+                    </div>
+                </article>
+
+                <article class="card-produto">
+                    <div class="card-topo">
+                        <img src="assets/mate maracuja.png" alt="Garrafa de Mate Carioca Maracujá">
+                    </div>
+                    <div class="card-info">
+                        <h3>Mate Carioca Maracujá</h3>
+                        <p>O tradicional, gelado e batido com suco de maracujá.</p>
+                        <span class="preco-produto">R$10,00</span>
+                    </div>
+                </article>
+
+                <article class="card-produto">
+                    <div class="card-topo">
+                        <img src="assets/globo salgado.png" alt="Pacote de Biscoito Globo Salgado">
+                    </div>
+                    <div class="card-info">
+                        <h3>Biscoito Globo Salgado</h3>
+                        <p>O acompanhamento tradicional do mate gelado.</p>
+                        <span class="preco-produto">R$8,00</span>
+                    </div>
+                </article>
+
+                <article class="card-produto">
+                    <div class="card-topo">
+                        <img src="assets/globo doce.png" alt="Pacote de Biscoito Globo Doce">
+                    </div>
+                    <div class="card-info">
+                        <h3>Biscoito Globo Doce</h3>
+                        <p>A versão docinha do clássico das praias cariocas.</p>
+                        <span class="preco-produto">R$8,00</span>
+                    </div>
+                </article>
+
+                <article class="card-produto">
+                    <div class="card-topo">
+                        <img src="assets/combo.png" alt="Combo de mate gelado com biscoito Globo">
+                    </div>
+                    <div class="card-info">
+                        <h3>Combo Carioca</h3>
+                        <p>Mate gelado + biscoito Globo: a dupla perfeita.</p>
+                        <span class="preco-produto">R$16,00</span>
+                    </div>
+                </article>
+
+                </div>
+            </div>
+
+            <button class="seta-carrossel seta-direita" aria-label="Próximo item">&#10095;</button>
+        </div>
+
+        <div class="container-centralizado bloco-pedido animar-scroll">
+            <h2 class="titulo-cardapio">Faça seu pedido</h2>
+            <p class="subtitulo-cardapio">Pedidos feitos com cuidado sob demanda</p>
+            <a href="https://instagram.com/matecariocafoz" target="_blank" rel="noopener" class="botao-instagram">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                Peça pelo Instagram!
+            </a>
+        </div>
+    </section>
+
+    <footer id="contato" class="rodape">
+        <div class="faixa-amarela-ondas">
+            <h3>MATE CARIOCA</h3>
+            <p>O sabor autêntico do Rio agora na fronteira!</p>
+        </div>
+        <div class="grade-contatos">
+            <div class="info-bloco">
+                <strong>Mate Carioca</strong><br>
+                <span>O verdadeiro sabor carioca em cada gole</span>
+            </div>
+            <div class="info-bloco">
+                <strong>Contato</strong><br>
+                <span>Foz do Iguaçu - PR<br>Instagram: @Matecariocafoz</span>
+            </div>
+            <div class="info-bloco">
+                <strong>Horário</strong><br>
+                <span>Sob demanda<br>Consulte disponibilidade</span>
+            </div>
+        </div>
+        <p class="direitos"><center>© 2026 Mate Carioca. Todos os direitos reservados.</center></p>
+    </footer>
+
+    <script src="cardapio.js"></script>
+</body>
+</html>
