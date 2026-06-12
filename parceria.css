@@ -1,0 +1,63 @@
+.secao-verde-parceria{
+    background-color: var(--verde-mate); 
+    color: white;
+    text-align: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 60px 10%; 
+}
+
+.lado-texto-final-formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.lado-texto-final-formulario h2{
+    margin-top: -22px;
+    font-size: 40pt;
+    white-space: nowrap;
+}
+
+.form-contato{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.form-contato label{
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    justify-content: space-between;
+    white-space: nowrap;
+}
+
+.form-contato label{
+    margin: 0;
+}
+
+.form-contato input{
+    width: 100%;
+    height: 25px;
+    border-radius: 15px;
+    border: none;
+    padding: 0px 10px;
+}
+
+.form-contato input:placeholder-shown{
+    align-self: center;
+    padding: 10px;
+}
+
+.form-contato textarea{
+    width: 100%;
+    height: 5rem;
+    border-radius: 15px;
+    padding: 10px;
+    border: none;
+}
