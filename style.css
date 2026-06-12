@@ -1,5 +1,4 @@
 /* --- CONFIGURAÇÕES GERAIS --- */
-/* --- CONFIGURAÇÕES GERAIS --- */
 :root {
     --verde-mate: #0C6938;
     --verde-mate-escuro: #004042;
@@ -9,10 +8,10 @@
     --cor-branca: #FFFFFF;
 }
 
-/* 1. Mapeamento da Fonte Local "Brasilêro" */
+
 @font-face {
-    font-family: 'Brasilero'; /* O "apelido" que daremos a ela no código */
-    src: url('assets/Brasilero2018Free.otf') format('truetype'); /* Ajuste o caminho e a extensão conforme o seu arquivo real */
+    font-family: 'Brasilero'; 
+    src: url('assets/Brasilero2018Free.otf') format('truetype'); 
     font-weight: normal;
     font-style: normal;
 }
@@ -31,11 +30,10 @@ body {
     line-height: 1.6;
 }
 
-/* 3. Sobrescrita de Títulos (Exclusivo para a Brasilêro) */
 h1, h2, h3, .faixa-amarela-ondas h3 {
-    /* Força o navegador a trocar a Poppins pela Brasilêro apenas nestas tags */
+    
     font-family: 'Brasilero', cursive, sans-serif; 
-    font-weight: normal; /* Fontes display/vernaculares geralmente não precisam de negrito extra */
+    font-weight: normal; 
     font-size: 3.5rem;
 }
 
@@ -68,7 +66,7 @@ h1, h2, h3, .faixa-amarela-ondas h3 {
 .menu-navegacao ul {
     display: flex;
     list-style: none;
-    gap: 30px; /* Espaçamento entre os links */
+    gap: 30px; 
 }
 
 .menu-navegacao a {
@@ -265,13 +263,13 @@ h1 { font-size: 3rem;
 .botao-verde {
     background-color: var(--verde-mate);
     color: white;
-    padding: 15px 35px; /* Deixa o botão mais largo e gordinho */
+    padding: 15px 35px; 
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.2rem; /* Aumenta a fonte do botão */
+    font-size: 1.2rem; 
     display: inline-block;
-    box-shadow: 0px 10px 20px rgba(12, 105, 56, 0.4); /* Sombra projetada com tom esverdeado */
+    box-shadow: 0px 10px 20px rgba(12, 105, 56, 0.4); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
