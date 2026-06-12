@@ -1,4 +1,5 @@
 /* --- CONFIGURAÇÕES GERAIS --- */
+/* --- CONFIGURAÇÕES GERAIS --- */
 :root {
     --verde-mate: #0C6938;
     --verde-mate-escuro: #004042;
@@ -8,17 +9,34 @@
     --cor-branca: #FFFFFF;
 }
 
+/* 1. Mapeamento da Fonte Local "Brasilêro" */
+@font-face {
+    font-family: 'Brasilero'; /* O "apelido" que daremos a ela no código */
+    src: url('assets/Brasilero2018Free.otf') format('truetype'); /* Ajuste o caminho e a extensão conforme o seu arquivo real */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 2. Regra Global (Corpo do texto e elementos menores) */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
     color: var(--verde-mate);
     background-color: var(--cor-branca);
     line-height: 1.6;
+}
+
+/* 3. Sobrescrita de Títulos (Exclusivo para a Brasilêro) */
+h1, h2, h3, .faixa-amarela-ondas h3 {
+    /* Força o navegador a trocar a Poppins pela Brasilêro apenas nestas tags */
+    font-family: 'Brasilero', cursive, sans-serif; 
+    font-weight: normal; /* Fontes display/vernaculares geralmente não precisam de negrito extra */
+    font-size: 3.5rem;
 }
 
 .cabecalho-topo {
@@ -60,13 +78,26 @@ body {
     font-weight: 600;
 }
 
-.menu-navegacao a:hover,.menu-navegacao a.link-ativo {
+.menu-navegacao a:hover {
     color: var(--laranja-mate);
+}
+
+.menu-navegacao a.link-ativo {
+    color: var(--verde-mate);
+    border-bottom: 3px solid var(--amarelo-fundo);
+    padding-bottom: 5px; 
 }
 
 /* --- SEÇÕES E CONTAINERS --- */
 section {
     padding: 80px 10%;
+}
+
+.conteudo-hero h1 {
+    font-size: 5.5rem; 
+    line-height: 1.1; 
+    font-weight: 800; 
+    margin-bottom: 20px;
 }
 
 .secao-inicio {
@@ -162,6 +193,20 @@ background-color: var(--verde-mate);
     margin-bottom: 30px; 
 }
 
+.balao-amarelo-inclinado {
+    background-color: var(--amarelo-fundo);
+    color: var(--verde-mate-escuro);
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 12px 25px;
+    border-radius: 12px;
+    display: inline-block; 
+    transform: rotate(-6deg); 
+    box-shadow: 2px 8px 15px rgba(0, 0, 0, 0.15); 
+    margin-bottom: 40px; 
+    margin-left: 20px; 
+}
+
 .secao-branca h2 {
     font-size: 2.5rem;
     color: var(--verde-mate);
@@ -209,7 +254,8 @@ h1 { font-size: 3rem;
     margin-bottom: 20px; 
 }
 .laranja-destaque, .texto-laranja { 
-    color: var(--laranja-mate); 
+    color: var(--laranja-mate);
+    font-family: Brasilero; 
 }
 
 .verde-escuro { 
@@ -219,11 +265,14 @@ h1 { font-size: 3rem;
 .botao-verde {
     background-color: var(--verde-mate);
     color: white;
-    padding: 15px 30px;
+    padding: 15px 35px; /* Deixa o botão mais largo e gordinho */
     border-radius: 50px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 1.2rem; /* Aumenta a fonte do botão */
     display: inline-block;
+    box-shadow: 0px 10px 20px rgba(12, 105, 56, 0.4); /* Sombra projetada com tom esverdeado */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .secao-mateiros .lado-texto {
@@ -359,4 +408,49 @@ h1 { font-size: 3rem;
     padding-bottom: 30px;
     font-size: 0.85rem;
     opacity: 0.8;
+}
+
+/* ==========================================================================
+   ANIMAÇÕES E EFEITOS DE INTERAÇÃO
+   ========================================================================== */
+
+/* 1. Classes para Animação de Scroll */
+.animar-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animar-scroll.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 2. Microinterações: Efeito de "Respiro" nas imagens ao passar o mouse */
+img {
+    transition: transform 0.4s ease;
+}
+
+img:hover {
+    transform: scale(1.03);
+}
+
+/* Exceção: não animar a logo do cabeçalho ao passar o mouse */
+.logo-mate:hover {
+    transform: none;
+}
+
+/* 3. Microinterações: Botões mais convidativos */
+.botao-verde, .botao-amarelo {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.botao-verde:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 15px 25px rgba(12, 105, 56, 0.6);
+} 
+
+.botao-amarelo:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
 }
