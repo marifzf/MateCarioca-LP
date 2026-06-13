@@ -20,40 +20,63 @@
         <nav class="menu-navegacao">
             <ul>
                 <li><a href="/index.html">Início</a></li>
-                <li><a href="#cardapio">Cardápio</a></li>
-                <li><a href="#parcerias" class="link-ativo">Parcerias</a></li>
+                <li><a href="/cardapio.html">Cardápio</a></li>
+                <li><a href="/parcerias.html" class="link-ativo">Parcerias</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="sobre" class="secao-branco-parceria">
-        <div class="flex-container">
+        <div class="text-parcerias">
             <h2>Parcerias</h2>
             <p>Vamos ccrescer juntos e levar o Mate Carioca para mais pessoas</p>
         </div>
-    </section>
 
-    <section id="sobre" class="secao-branco-parceria">
-        <div class="flex-container">
-            
-            <div class="lado-imagem">
-                <img src="assets/fileira-mate.png" alt="Garrafas Mate Carioca">
-            </div>
-
-            <div class="lado-texto-final-formulario">
-                <h2>SEJA UM PARCEIRO OU REVENDEDOR</h2>
-                <form class="form-contato" id="form-contato">
-                    <label for="nome">Seu nome: <input type="text" id="nome" placeholder="Nome" required /></label>
-                    <label for="telefone">Contato: <input type="tel" id="telefone" placeholder="Contato" required/></label>
-                    <label for="email">Email: <input type="email" id="email" placeholder="Email" required/></label>
-                    <label for="texto">Cidade: <input type="text" id="email" placeholder="Cidade" required/></label>
-                    <textarea rows="6" cols="40" placeholder="Digite sua menssagem para nó aqui!" required></textarea>
-                    <button type="submit" class="botao-amarelo" id="clienteForm">Enviar formulário!</button>
-                </form>
-                
-            </div>
-
+        <div class="text-parcerias">
+            <h2>Por que ser nosso parceiro?</h2>
+            <p>Junte-se a uma marca em crescimento com produtos autênticos e de qualidade</p>
         </div>
+
+        <div class="card-content">
+            <div class="card-parcerias">
+                <img src="assets/card-img-grafico.png" width="90">
+                <h4>Crescimento Mútuo</h4>
+                <p>Crescemos juntos com estratégias de marketing compartilhado.</p>
+            </div>
+
+            <div class="card-parcerias">
+                <img src="assets/card-img-publico.png" width="90">
+                <h4>Novo Público</h4>
+                <p>Alcance novos clientes através da nossa rede de parceiros</p>
+            </div>
+
+            <div class="card-parcerias">
+                <img src="assets/card-img-handshake.png" width="90">
+                <h4>Temos Flexibilidade</h4>
+                <p>Condições personalizadas para cada tipo de parceria</p>
+            </div>
+
+            <div class="card-parcerias">
+                <img src="assets/card-img-building.png" width="90">
+                <h4>Suporte Dedicado</h4>
+                <p>Equipe pronta para ajudar seu negócio a crescer</p>
+            </div>
+        </div>
+        
+        <div class="text-parcerias">
+            <h2>Vamos Conversar?</h2>
+            <p>Preencha o formulário e nossa equipe entrará em contato</p>
+        </div>
+
+        <form class="form-contato" id="form-contato" style="visibility: hidden;">
+            <label class="form-contato-label-input" for="nome"><p>Nome completo*</p><input type="text" id="nome" placeholder="Nome" required /></label>
+            <label class="form-contato-label-input" for="telefone"><p>Empresa*</p><input type="tel" id="telefone" placeholder="Contato" required/></label>
+            <label class="form-contato-label-input" for="email"><p>E-mail*</p><input type="email" id="email" placeholder="Email" required/></label>
+            <label class="form-contato-label-input" for="texto"><p>Telefone*</p><input type="text" id="cidade" placeholder="Cidade" required/></label>
+            <label class="form-contato-text" for="mensagem"><p>Mensagem</p><textarea id="mensagem" rows="6" cols="40" placeholder="Digite sua menssagem para nó aqui!" required></textarea></label>
+            <button type="submit" class="botao-formulario" id="clienteForm">Enviar proposta</button>
+        </form>
+                
     </section>
 
     <footer id="contato" class="rodape">
