@@ -1,0 +1,131 @@
+.secao-cardapio {
+    background-color: var(--cor-branca);
+    padding: 100px 10%;
+}
+
+.titulo-cardapio {
+    color: var(--verde-mate);
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitulo-cardapio {
+    color: var(--verde-mate);
+    font-size: 1.2rem;
+    font-weight: 400;
+    opacity: 0.85;
+    margin-bottom: 60px;
+}
+
+/* --- Carrossel --- */
+.carrossel-cardapio {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 100px;
+}
+
+.carrossel-janela {
+    flex: 1;
+    overflow: hidden;
+    padding: 60px 0 40px 0;
+}
+
+.carrossel-trilho {
+    display: flex;
+    gap: 40px;
+}
+
+.seta-carrossel {
+    background-color: var(--amarelo-fundo);
+    color: var(--verde-mate-escuro);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.seta-carrossel:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* --- Cards de produto --- */
+.card-produto {
+    background-color: var(--cor-branca);
+    border-radius: 30px;
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.12);
+    flex: 0 0 calc((100% - 80px) / 3);
+    text-align: left;
+}
+
+.card-topo {
+    background-color: var(--verde-mate);
+    border-radius: 30px 30px 0 0;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.card-topo img {
+    height: 230px;
+    margin-top: -50px;
+    object-fit: contain;
+    border-radius: 0;
+}
+
+.card-info {
+    padding: 25px 30px 30px 30px;
+}
+
+.card-info h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--verde-mate);
+    margin-bottom: 8px;
+}
+
+.card-info p {
+    font-size: 0.95rem;
+    color: var(--verde-mate-escuro);
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+.preco-produto {
+    color: var(--laranja-mate);
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.bloco-pedido .subtitulo-cardapio {
+    margin-bottom: 45px;
+}
+
+.botao-instagram {
+    background: linear-gradient(90deg, #FDB804, #F78211);
+    color: var(--cor-branca);
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 45px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 500;
+    box-shadow: 0px 10px 20px rgba(247, 130, 17, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.botao-instagram:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 15px 25px rgba(247, 130, 17, 0.5);
+}

@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Mate Carioca</title>
+    <link rel="icon" type="image/svg+xml" href="assets/MATE ID-10.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,27 +19,31 @@
         <nav class="menu-navegacao">
             <ul>
                 <li><a href="#inicio" class="link-ativo">Início</a></li>
-                <li><a href="#cardapio">Cardápio</a></li>
+                <li><a href="/cardapio.html">Cardápio</a></li>
                 <li><a href="/parcerias.html">Parcerias</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="inicio" class="secao-inicio">
-        <div class="conteudo-hero">
-            <h1 class = "verde-escuro">TUDO COMEÇOU COM <span class="laranja-destaque">UMA VIAGEM</span></h1>
-            <p>Do verão carioca direto para Foz!</p>
-            <a href="#" class="botao-verde">Experimente agora! ></a>
+        <div class="conteudo-hero animar-scroll">
+            <h1 class="verde-escuro">TUDO COMEÇOU <br>
+                COM <span class="laranja-destaque">UMA 
+                    <br>VIAGEM</span>
+            </h1>
+            <div class="balao-amarelo-inclinado">
+                Do verão carioca direto para Foz!
+            </div>           
         </div>
-        <div class="imagem-topo moldura-pontilhada">
+        <div class="imagem-topo moldura-pontilhada animar-scroll">
             <img src="assets/garrafas-mate.png" alt="Mate Carioca">
         </div>
     </section>
 
     <section id="sobre" class="secao-verde">
-        <div class="container-centralizado">
-            <h2>SOMOS MARI E VINI</h2>
-            <p>Apaixonados por praia, verão e mate. Nas férias no Rio, a gente se viciou no clássico chá mate gelado de praia... Voltamos pra casa com saudade daquele sabor.</p>
+        <div class="container-centralizado animar-scroll">
+            <h2>OI, EU SOU O VINI!</h2>
+            <p>Apaixonado por praia, verão e mate. Nas férias no Rio, viajei com minha namorada a gente se viciou no clássico chá mate gelado de praia... Voltamos pra casa com saudade daquele sabor.</p>
             <div class="moldura-pontilhada">
                 <img src="assets/mari_e_vini.png" alt="Mari e Vini">
             </div>
@@ -46,28 +51,29 @@
     </section>
 
     <section id="historia" class="secao-laranja">
-        <div class="flex-container">
+        <div class="flex-container animar-scroll">
             <div class="lado-imagem">
                 <img src="assets/mate-gelado.png" alt="Produção" class="borda-arredondada">
             </div>
             <div class="lado-texto">
-                <h2>O VINI APRENDEU A FAZER E POSTAMOS</h2>
-                <p>Servimos pros amigos e virou febre. Todo mundo pedia mais! Postamos nos stories... e os pedidos começaram a chegar. Foi assim que nasceu o nosso mate. Direto do clima de praia do Rio pra Foz.</p>
+                <h2>APRENDI A FAZER E POSTEI</h2>
+                <p>Servi pros amigos e virou febre. Todo mundo pedia mais! Postei nos stories... e os pedidos começaram a chegar. Foi assim que nasceu o nosso mate. Direto do clima de praia do Rio pra Foz.</p>
             </div>
         </div>
     </section>
 
-<section class="secao-branca">
-        <div class="container-centralizado">
+    <section class="secao-branca">
+        <div class="container-centralizado animar-scroll">
             <h2>Você sabe de onde vem o <span class="texto-laranja">mate de praia do Rio?</span></h2>
             <div class="balao-laranja">Vem que a gente te conta!</div>
-            <div align="center"> <img src="assets/mate-de-praia.png" alt="Cultura do Mate">
+            <div align="center"> 
+                <img src="assets/mate-de-praia.png" alt="Cultura do Mate">
             </div>
         </div>
     </section>
 
     <section class="secao-laranja">
-        <div class="flex-container inverso">
+        <div class="flex-container inverso animar-scroll">
             <div class="lado-imagem">
                 <img src="assets/cristo-redentor.png" alt="Rio">
             </div>
@@ -75,15 +81,16 @@
                 <p>Nos anos <span class="destaque-verde">1950</span>, o <span class="destaque-verde">Rio de Janeiro</span> adaptou o mate do <span class="destaque-verde">Sul do Brasil</span> para o verão.</p>
                 <p>Gelado, com limão e perfeito para a praia.</p>
             </div>
+        </div>
     </section>
 
-<section class="secao-verde secao-mateiros">
-        <div class="flex-container">
+    <section class="secao-verde secao-mateiros">
+        <div class="flex-container animar-scroll">
             
             <div class="lado-texto">
                 <div class="etiqueta-amarela-quadrada">Os "Mateiros"</div>
-                <p class="texto-destaque-mateiros">Foram os vendedores ambulantes, com seus galões e uniforme laranja</p>
-                <p class="texto-complemento-mateiros">que transformaram o mate em símbolo das praias cariocas.</p>
+                <p class="texto-destaque-mateiros">Foram os vendedores ambulantes, com seus galões e uniforme laranja<br>
+                que transformaram o mate em símbolo das praias cariocas.</p>
                 <hr class="linha-amarela">
                 <p class="texto-rodape-mateiros">Em 2012, o mate de praia foi reconhecido como Patrimônio Cultural e Imaterial do Rio de Janeiro.</p>
             </div>
@@ -96,7 +103,7 @@
     </section>
 
     <section class="secao-verde-escuro secao-final">
-        <div class="flex-container">
+        <div class="flex-container animar-scroll">
             
             <div class="lado-imagem">
                 <img src="assets/fileira-mate.png" alt="Garrafas Mate Carioca">
@@ -133,5 +140,6 @@
         <p class="direitos"><center>© 2026 Mate Carioca. Todos os direitos reservados.</center></p>
     </footer>
 
+    <script src="index.js"></script>
 </body>
 </html>
