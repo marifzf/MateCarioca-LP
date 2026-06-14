@@ -129,3 +129,27 @@
     transform: translateY(-4px);
     box-shadow: 0px 15px 25px rgba(247, 130, 17, 0.5);
 }
+
+@media (max-width: 1000px) {
+    .card-produto {
+        flex: 0 0 calc((100% - 40px) / 2);
+    }
+}
+
+@media (max-width: 640px) {
+    .secao-cardapio {
+        padding: 60px 4%;      
+    }
+    .carrossel-cardapio {
+        gap: 10px;             
+    }
+    .seta-carrossel {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        font-size: 1rem;       
+    }
+    .card-produto {
+        flex: 0 0 100%;         
+    }
+}

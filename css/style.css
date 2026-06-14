@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: 'Brasilero'; 
-    src: url('assets/Brasilero2018Free.otf') format('truetype'); 
+    src: url('/assets/Brasilero2018Free.otf') format('truetype'); 
     font-weight: normal;
     font-style: normal;
 }
@@ -103,7 +103,7 @@ section {
     align-items: center;
     justify-content: space-between;
     min-height: 80vh;
-    background-image: url('assets/mapa.png'); 
+    background-image: url('/assets/mapa.png'); 
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain; 
