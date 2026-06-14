@@ -535,3 +535,36 @@ section,
     padding-left: max(10%, calc((100% - 1200px) / 2)) !important;
     padding-right: max(10%, calc((100% - 1200px) / 2)) !important;
 }
+
+/* ==========================================================================
+   RESPONSIVIDADE MOBILE (CELULARES E TABLETS)
+   ========================================================================== */
+
+@media (max-width: 768px) {    
+    
+    .flex-container,
+    .inverso,
+    .secao-inicio {
+        flex-direction: column !important; 
+        gap: 30px; 
+    }
+    
+    .flex-container .lado-texto,
+    .flex-container .lado-texto-final,
+    .conteudo-hero {
+        order: 1; 
+        width: 100%; 
+        text-align: center; 
+    }
+    
+    .flex-container .lado-imagem,
+    .imagem-topo {
+        order: 2; 
+        width: 100%; 
+    }
+
+    .balao-amarelo-inclinado {
+        margin-left: 0; 
+        margin-bottom: 25px;
+    }
+}
