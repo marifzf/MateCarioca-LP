@@ -1,63 +1,143 @@
-.secao-verde-parceria{
-    background-color: var(--verde-mate); 
-    color: white;
+.secao-branco-parceria{
+    background-color: var(--cor-branca);
+    color: var(--verde-mate-escuro);
     text-align: center; 
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    padding: 60px 10%; 
-}
-
-.lado-texto-final-formulario{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 2rem;
+    padding: 3rem 0rem 8rem 0rem;
+    align-items: center;
 }
 
-.lado-texto-final-formulario h2{
-    margin-top: -22px;
-    font-size: 40pt;
-    white-space: nowrap;
+.text-parcerias{
+    padding: 25px;
+    animation: slideUp 0.5s ease forwards;
 }
 
-.form-contato{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    flex-direction: column;
-    gap: 0.8rem;
-}
-
-.form-contato label{
-    display: flex;
+.card-content{
     width: 100%;
-    gap: 1rem;
-    justify-content: space-between;
-    white-space: nowrap;
+    max-width: 1100px;
+    margin: 0 auto; 
+    display: flex;
+    flex-wrap: wrap;  
+    justify-content: center;    
+    align-items: stretch;        
+    gap: 1.5rem;
+    padding: 30px 0;
+    animation: slideUp 1s ease forwards;
 }
 
-.form-contato label{
+.card-parcerias{
+    flex: 1 1 0; 
+    min-height: 15rem;  
+    min-width: 12rem;       
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.5rem;
+    background-color: var(--cor-branca);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
+    transition: 0.3s;
+    text-align: center;
+}
+
+.card-parcerias:hover{
+    transform: translateY(-10px) scale(1.02);
+}
+
+.card-parcerias img{
+    margin-bottom: 0;
+}
+
+.card-parcerias h4{
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--verde-mate);
+    line-height: 1.2;
     margin: 0;
 }
 
-.form-contato input{
-    width: 100%;
-    height: 25px;
-    border-radius: 15px;
-    border: none;
-    padding: 0px 10px;
+.card-parcerias p{
+    font-size: 1rem;
+    color: var(--verde-mate);
+    line-height: 1.4;
+    margin: 0;
+}
+/* ==================================================================== */
+
+.form-contato{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.5rem 2rem; 
+    max-width: 60rem; 
+    height: auto;
+    border-radius: 40px;
+    padding: 3rem 4rem 2rem 4rem;
+    background-color: var(--cor-branca);
+    box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.2);
 }
 
-.form-contato input:placeholder-shown{
-    align-self: center;
+.form-contato-label-input{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(50% - 1rem);
+    min-width: 250px;
+}
+
+.form-contato p{
+    text-align: left;
+    color: var(--verde-mate);
+    font-family: 'Brasilero';
+    font-size: 14pt;
+}
+
+.form-contato-text{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+}
+
+.form-contato button{
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    border-radius: 15px;
+    background: linear-gradient(45deg, var(--amarelo-fundo), var(--laranja-mate));
+    font-family: 'Brasilero';
+    font-size: 22pt;
+    color: var(--cor-branca);
+    transition: 0.3s;
+}
+
+.form-contato button:hover{
+    transform: scale(1.01);
+}
+
+.form-contato button:active{
+    transform: scale(0.998);
+}
+
+.form-contato input{
+    border: 1px solid rgba(83, 83, 83, 0.5);
+    border-radius: 10px;
+    width: 100%;
     padding: 10px;
 }
 
 .form-contato textarea{
     width: 100%;
-    height: 5rem;
-    border-radius: 15px;
+    height: 12rem;
+    border: 1px solid rgba(83, 83, 83, 0.5);
+    border-radius: 10px;
     padding: 10px;
-    border: none;
+}
+
+@keyframes slideUp {
+    from { transform: translate(0%, 20%); opacity: 0; }
+    to { transform: translate(0%, 0%); opacity: 1; }
 }
