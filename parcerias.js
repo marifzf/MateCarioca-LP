@@ -24,14 +24,19 @@ const formulario = document.getElementById('form-contato');
 const urlGoogleScript = 'https://script.google.com/macros/s/AKfycbzKuXvwwh6uCKPR467JyjCI5lyDyJsDkbeDxUz4Wu4qpQPDNFSsR8LvUWaVvYTBE1xi/exec'; 
 
 formulario.addEventListener('submit', async function(event) {
-    event.preventDefault(); 
+    event.preventDefault();
+    let pegarData = new Date();
+    let dataHoje = pegarData.toLocaleDateString('pt-BR');
+
+    console.log(dataHoje);
 
     const dadosFormulario = {
         nome: formulario.nome.value,
         empresa: formulario.empresa.value,
         email: formulario.email.value,
         telefone: formulario.telefone.value,
-        mensagem: formulario.mensagem.value
+        mensagem: formulario.mensagem.value,
+        data: dataHoje
     };
 
     try {
