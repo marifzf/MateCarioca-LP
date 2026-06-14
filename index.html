@@ -30,30 +30,41 @@
             <p>Do verão carioca direto para Foz!</p>
             <a href="#" class="botao-verde">Experimente agora! ></a>
         </div>
-        <div class="imagem-topo moldura-pontilhada">
+        <div class="imagem-topo animar-scroll">
             <img src="assets/garrafas-mate.png" alt="Mate Carioca">
         </div>
     </section>
 
     <section id="sobre" class="secao-verde">
-        <div class="container-centralizado">
-            <h2>SOMOS MARI E VINI</h2>
-            <p>Apaixonados por praia, verão e mate. Nas férias no Rio, a gente se viciou no clássico chá mate gelado de praia... Voltamos pra casa com saudade daquele sabor.</p>
-            <div class="moldura-pontilhada">
-                <img src="assets/mari_e_vini.png" alt="Mari e Vini">
+        <div class="flex-container animar-scroll">
+            
+            <div class="lado-texto">
+                <h2>OI, EU SOU O VINI!</h2>
+                <p>Apaixonado por praia, verão e mate. Nas férias no Rio, viajei com minha namorada a gente se viciou no clássico chá mate gelado de praia... Voltamos pra casa com saudade daquele sabor.</p>
             </div>
+
+            <div class="lado-imagem">
+                <img src="assets/mate-ferias.png" alt="Mate nas Férias">
+            </div>
+
         </div>
     </section>
 
     <section id="historia" class="secao-laranja">
-        <div class="flex-container">
-            <div class="lado-imagem">
-                <img src="assets/mate-gelado.png" alt="Produção" class="borda-arredondada">
-            </div>
+        <div class="flex-container animar-scroll">           
+
+                <div class="lado-imagem">
+                    <img src="assets/mate-gelado.png" alt="Produção">
+                </div>
+            
             <div class="lado-texto">
-                <h2>O VINI APRENDEU A FAZER E POSTAMOS</h2>
-                <p>Servimos pros amigos e virou febre. Todo mundo pedia mais! Postamos nos stories... e os pedidos começaram a chegar. Foi assim que nasceu o nosso mate. Direto do clima de praia do Rio pra Foz.</p>
+                <h2>APRENDI A FAZER E POSTEI</h2>
+                
+                <div class="caixa-verde-texto">
+                    <p>Servi pros amigos e virou febre. Todo mundo pedia mais! Postei nos stories... e os pedidos começaram a chegar. Foi assim que nasceu o nosso mate. Direto do clima de praia do Rio pra Foz.</p>
+                </div>
             </div>
+            
         </div>
     </section>
 
@@ -61,9 +72,10 @@
         <div class="container-centralizado">
             <h2>Você sabe de onde vem o <span class="texto-laranja">mate de praia do Rio?</span></h2>
             <div class="balao-laranja">Vem que a gente te conta!</div>
-            <div align="center"> <img src="assets/mate-de-praia.png" alt="Cultura do Mate">
+                <div align="center">             
+                <img src="assets/mate-de-praia.png" alt="Cultura do Mate">
+                </div>
             </div>
-        </div>
     </section>
 
     <section class="secao-laranja">
@@ -82,14 +94,18 @@
             
             <div class="lado-texto">
                 <div class="etiqueta-amarela-quadrada">Os "Mateiros"</div>
+                
                 <p class="texto-destaque-mateiros">Foram os vendedores ambulantes, com seus galões e uniforme laranja</p>
                 <p class="texto-complemento-mateiros">que transformaram o mate em símbolo das praias cariocas.</p>
+                
                 <hr class="linha-amarela">
                 <p class="texto-rodape-mateiros">Em 2012, o mate de praia foi reconhecido como Patrimônio Cultural e Imaterial do Rio de Janeiro.</p>
             </div>
 
             <div class="lado-imagem">
-                <img src="assets/mateiros.png" alt="Mateiros">
+                <div class="moldura-mateiros">
+                    <img src="assets/mateiros.png" alt="Mateiros">
+                </div>
             </div>
 
         </div>
@@ -105,7 +121,7 @@
             <div class="lado-texto-final">
                 <h2>E foi essa tradição que inspirou o Mate Carioca</h2>
                 <p>Trouxemos esse clássico das praias do Rio pra refrescar a fronteira também, já experimentou?</p>
-                <a href="#" class="botao-amarelo">Faça seu pedido! ></a>
+                <a href="/cardapio.html" class="botao-amarelo">Faça seu pedido! ></a>
             </div>
 
         </div>
@@ -133,5 +149,12 @@
         <p class="direitos"><center>© 2026 Mate Carioca. Todos os direitos reservados.</center></p>
     </footer>
 
+    <button id="botao-topo" class="escondido" aria-label="Voltar ao topo">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+
+    <script src="index.js"></script>
 </body>
 </html>
