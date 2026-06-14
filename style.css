@@ -8,7 +8,6 @@
     --cor-branca: #FFFFFF;
 }
 
-
 @font-face {
     font-family: 'Brasilero'; 
     src: url('assets/Brasilero2018Free.otf') format('truetype'); 
@@ -16,7 +15,7 @@
     font-style: normal;
 }
 
-/* 2. Regra Global (Corpo do texto e elementos menores) */
+/* Regra Global (Corpo do texto e elementos menores) */
 * {
     margin: 0;
     padding: 0;
@@ -30,11 +29,22 @@ body {
     line-height: 1.6;
 }
 
-h1, h2, h3, .faixa-amarela-ondas h3 {
-    
+/* Regra Unificada para Imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+h1, h2, h3, .faixa-amarela-ondas h3 {    
     font-family: 'Brasilero', cursive, sans-serif; 
     font-weight: normal; 
     font-size: 3.5rem;
+    line-height: 1.1; 
+    margin-bottom: 15px; 
 }
 
 .cabecalho-topo {
@@ -52,7 +62,7 @@ h1, h2, h3, .faixa-amarela-ondas h3 {
 .caixa-logo {
     display: flex;
     align-items: center;
-    width: 100px; 
+    width: 120px; 
     height: auto;
 }
 
@@ -72,8 +82,8 @@ h1, h2, h3, .faixa-amarela-ondas h3 {
 .menu-navegacao a {
     text-decoration: none;
     color: var(--verde-mate);
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size: 1.0rem;
+    font-weight: 300;
 }
 
 .menu-navegacao a:hover {
@@ -92,9 +102,8 @@ section {
 }
 
 .conteudo-hero h1 {
-    font-size: 5.5rem; 
+    font-size: 4.5rem; 
     line-height: 1.1; 
-    font-weight: 800; 
     margin-bottom: 20px;
 }
 
@@ -112,29 +121,35 @@ section {
     margin-top: 50px;
 }
 
+.conteudo-hero, .imagem-topo {
+    flex: 1; 
+    min-width: 0; 
+}
+
 .secao-verde { 
-background-color: var(--verde-mate); 
-    color: white;
-    text-align: center; 
+    background-color: var(--verde-mate); 
+    color: white; 
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: flex-start; 
     padding: 100px 10%; 
 }
+
 .secao-verde h2 {
     font-size: 3.5rem; 
-    font-weight: 700;
     letter-spacing: -1px; 
     margin-bottom: 20px;
     text-transform: uppercase; 
+    text-align: left; 
 }
 
 .secao-verde p {
     font-size: 1.2rem;
     max-width: 800px; 
     line-height: 1.5;
-    margin: 0 auto 50px auto; 
+    margin-bottom: 50px; 
     font-weight: 400;
+    text-align: left; 
 }
 
 .secao-laranja { 
@@ -169,16 +184,8 @@ background-color: var(--verde-mate);
 }
 
 .secao-branca { 
-    background-color: 
-    var(--cor-branca);
+    background-color: var(--cor-branca);
     text-align: center; 
-}
-
-.secao-branca .moldura-pontilhada {
-    margin: 0 auto; 
-    display: block; 
-    width: fit-content; 
-    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15); 
 }
 
 .balao-laranja {
@@ -215,45 +222,26 @@ background-color: var(--verde-mate);
     display: flex;
     align-items: center;
     gap: 40px;
+    width: 100%; 
 }
 
 .inverso { 
-    flex-direction: 
-    row-reverse; 
+    flex-direction: row-reverse; 
 }
+
 .container-centralizado { 
     text-align: center; 
 }
 
-.moldura-pontilhada {
-    border: 3px dashed var(--laranja-mate);
-    border-radius: 50px;
-    display: inline-block;
-    padding: 0; 
-    overflow: hidden; 
-    position: relative; 
-}
-
-.moldura-pontilhada img {
-    margin: -3px; 
-    border-radius: 50px; 
-    width: calc(100% + 6px); 
-    display: block;
-}
-
-img {
-    max-width: 100%;
-    border-radius: 12px;
-    display: block;
-}
-
-h1 { font-size: 3rem; 
+h1 { 
+    font-size: 3rem; 
     line-height: 1.1; 
     margin-bottom: 20px; 
 }
+
 .laranja-destaque, .texto-laranja { 
     color: var(--laranja-mate);
-    font-family: Brasilero; 
+    font-family: 'Brasilero', cursive, sans-serif; 
 }
 
 .verde-escuro { 
@@ -270,7 +258,6 @@ h1 { font-size: 3rem;
     font-size: 1.2rem; 
     display: inline-block;
     box-shadow: 0px 10px 20px rgba(12, 105, 56, 0.4); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .secao-mateiros .lado-texto {
@@ -289,7 +276,7 @@ h1 { font-size: 3rem;
     margin-bottom: 25px;
 }
 
-.texto-destaque-mateiros {
+.secao-verde .texto-destaque-mateiros {
     font-size: 2.2rem;
     font-weight: 700;
     color: white;
@@ -297,11 +284,21 @@ h1 { font-size: 3rem;
     margin-bottom: 10px;
 }
 
-.texto-complemento-mateiros {
+.secao-verde .texto-complemento-mateiros {
     font-size: 1.2rem;
     color: white;
     font-weight: 400;
     margin-bottom: 20px;
+}
+
+.moldura-mateiros {
+    width: 100%;
+    display: block; 
+}
+
+.moldura-mateiros img {
+    object-fit: cover; 
+    aspect-ratio: 4 / 3; 
 }
 
 .linha-amarela {
@@ -357,11 +354,10 @@ h1 { font-size: 3rem;
 }
 
 .rodape {
-    background-color: var(--verde-mate); 
+    background-color: var(--verde-mate-escuro); 
     color: white;
     text-align: center;
 }
-
 
 .faixa-amarela-ondas {
     background-color: #FFB703; 
@@ -369,7 +365,6 @@ h1 { font-size: 3rem;
     background-repeat: no-repeat; 
     background-position: center; 
     background-size: cover; 
-    
     padding: 80px 20px;
 }
 
@@ -396,7 +391,6 @@ h1 { font-size: 3rem;
     line-height: 1.8; 
 }
 
-
 .info-bloco strong {
     color: #FBA70A; 
     font-size: 1.3rem;
@@ -414,7 +408,6 @@ h1 { font-size: 3rem;
    ANIMAÇÕES E EFEITOS DE INTERAÇÃO
    ========================================================================== */
 
-/* 1. Classes para Animação de Scroll */
 .animar-scroll {
     opacity: 0;
     transform: translateY(50px);
@@ -426,21 +419,14 @@ h1 { font-size: 3rem;
     transform: translateY(0);
 }
 
-/* 2. Microinterações: Efeito de "Respiro" nas imagens ao passar o mouse */
-img {
-    transition: transform 0.4s ease;
-}
-
 img:hover {
     transform: scale(1.03);
 }
 
-/* Exceção: não animar a logo do cabeçalho ao passar o mouse */
 .logo-mate:hover {
     transform: none;
 }
 
-/* 3. Microinterações: Botões mais convidativos */
 .botao-verde, .botao-amarelo {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -453,4 +439,99 @@ img:hover {
 .botao-amarelo:hover {
     transform: translateY(-4px);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================================================
+   CORREÇÕES DE PROPORÇÃO E LAYOUT (SEÇÃO HISTÓRIA E CAIXAS)
+   ========================================================================== */
+
+.flex-container .lado-imagem,
+.flex-container .lado-texto {
+    flex: 1; 
+    min-width: 0; 
+}
+
+.caixa-verde-texto {
+    background-color: var(--verde-mate);
+    padding: 30px; 
+    border-radius: 20px; 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); 
+    margin-top: 25px; 
+}
+
+.caixa-verde-texto p {
+    color: var(--cor-branca) !important; 
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0 !important;
+} 
+
+/* ======================
+   BOTÃO SCROLL TO TOP
+   ====================== */
+
+#botao-topo {
+    position: fixed;
+    bottom: 30px; 
+    right: 30px; 
+    background-color: var(--amarelo-fundo);
+    color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%; 
+    border: none;
+    cursor: pointer; 
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    z-index: 999;    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease, background-color 0.3s ease;
+}
+
+#botao-topo svg {
+    width: 26px;
+    height: 26px;
+}
+
+#botao-topo:hover {
+    background-color: var(--verde-mate);
+    transform: translateY(-5px); 
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+#botao-topo.escondido {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px); 
+}
+
+#botao-topo.visivel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); 
+}
+
+#sobre .lado-imagem img {
+    width: 100%; 
+    object-fit: cover; 
+    aspect-ratio: 4 / 3; 
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE E LIMITES GLOBAIS
+   ========================================================================== */
+
+html {    
+    font-size: clamp(16px, 1vw + 6px, 22px);
+}
+
+.cabecalho-topo,
+section,
+.faixa-amarela-ondas,
+.grade-contatos {    
+    padding-left: max(10%, calc((100% - 1200px) / 2)) !important;
+    padding-right: max(10%, calc((100% - 1200px) / 2)) !important;
 }
