@@ -15,27 +15,32 @@
 }
 
 .card-content{
-    width: 100%;
+    width: 100%;    
+    margin: 0 auto; 
     display: flex;
-    padding: 30px 10%;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-wrap: wrap;  
+    justify-content: center;    
+    align-items: stretch;        
+    gap: 1.5rem;
+    padding: 30px 0;
     animation: slideUp 1s ease forwards;
 }
 
 .card-parcerias{
-    width: 20rem;
-    height: 20rem;
-    border-radius: 40px;
+    flex: 1 1 0; 
+    min-height: 15rem;  
+    min-width: 220px;       
+    border-radius: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 20px;
+    gap: 0.5rem;
+    padding: 1.5rem;
     background-color: var(--cor-branca);
-    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
     transition: 0.3s;
-    color: var(--verde-mate);
+    text-align: center;
 }
 
 .card-parcerias:hover{
@@ -43,15 +48,32 @@
 }
 
 .card-parcerias img{
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
+
+.card-parcerias h4{
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--verde-mate);
+    line-height: 1.2;
+    margin: 0;
+}
+
+.card-parcerias p{
+    font-size: 1rem;
+    color: var(--verde-mate);
+    line-height: 1.4;
+    margin: 0;
+}
+/* ==================================================================== */
 
 .form-contato{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 45rem;
-    height: 40rem;
+    gap: 1.5rem 2rem; 
+    max-width: 60rem; 
+    height: auto;
     border-radius: 40px;
     padding: 3rem 4rem 2rem 4rem;
     background-color: var(--cor-branca);
@@ -61,8 +83,8 @@
 .form-contato-label-input{
     display: flex;
     flex-direction: column;
-    width: 280px;
-    height: fit-content;
+    flex: 1 1 calc(50% - 1rem);
+    min-width: 250px;
 }
 
 .form-contato p{
@@ -81,9 +103,8 @@
 
 .form-contato button{
     width: 100%;
-    height: 10%;
     border: none;
-    padding: 0;
+    padding: 1rem;
     border-radius: 15px;
     background: linear-gradient(45deg, var(--amarelo-fundo), var(--laranja-mate));
     font-family: 'Brasilero';
@@ -104,10 +125,6 @@
     border: 1px solid rgba(83, 83, 83, 0.5);
     border-radius: 10px;
     width: 100%;
-}
-
-.form-contato input:placeholder-shown{
-    align-self: center;
     padding: 10px;
 }
 
