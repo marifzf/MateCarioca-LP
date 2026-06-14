@@ -19,8 +19,34 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(elemento);
 });
 
-document.addEventListener('submit', () => {
-    const form = document.getElementById('form-contato');
+const formulario = document.getElementById('form-contato');
 
-    alert(form.nome.value);
+const urlGoogleScript = 'https://script.google.com/macros/s/AKfycbzKuXvwwh6uCKPR467JyjCI5lyDyJsDkbeDxUz4Wu4qpQPDNFSsR8LvUWaVvYTBE1xi/exec'; 
+
+formulario.addEventListener('submit', async function(event) {
+    event.preventDefault(); 
+
+    const dadosFormulario = {
+        nome: formulario.nome.value,
+        empresa: formulario.empresa.value,
+        email: formulario.email.value,
+        telefone: formulario.telefone.value,
+        mensagem: formulario.mensagem.value
+    };
+
+    try {
+        const response = await fetch(urlGoogleScript, {
+            method: 'POST',
+            mode: 'no-cors', // Evita erros de bloqueio de segurança do navegador (CORS)
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dadosFormulario)
+        });
+
+        formulario.reset();
+        alert('Obrigado, Em breve entraremos em contato!');
+    } catch (error) {
+        alert('Erro ao enviar os dados: ' + error.message);
+    }
 });
