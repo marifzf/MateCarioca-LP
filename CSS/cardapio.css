@@ -33,7 +33,7 @@
 
 .carrossel-trilho {
     display: flex;
-    gap: 40px;
+    gap: 40px; 
 }
 
 .seta-carrossel {
